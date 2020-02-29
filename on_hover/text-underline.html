@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>
+            Text Underline : On hover
+        </title>
+        <style>
+            body{
+                background-color: black;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 500px ;
+            }
+            .container{
+                color: white;
+                position: relative;
+            }
+            .container:after{
+                content: "";
+                position: absolute;
+                bottom: 0%;
+                left: 0%;
+                
+                height: 1px;
+                background-color: white;
+            }
+            .container:hover:after{
+                
+                width: 0%;
+                animation: underline 2s forwards;
+            }
+            @keyframes underline{
+                100%{
+                    width: 100% ;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            Lorem Ipsum
+        </div>
+    </body>
+</html>
