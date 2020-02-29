@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>
+            Battery Loader
+        </title>
+        <style>
+            body{
+                background-color: white;
+            }
+            .battery{
+                width: 150px;
+                height: 75px;
+                background-color: teal;
+                margin: 0 auto;
+                margin-top: 100px;
+                border-radius: 4%;
+                border: 2px solid black;
+                position: relative;
+            }
+            .battery:before{
+                content: "";
+                position: absolute;
+                right: -18px;
+                top: 20px;
+                width: 10px;
+                height: 30px;
+                border-radius: 12%;
+                background-color: teal;
+                border: 2px solid black;
+            }
+            .battery:after{
+                content: "";
+                background-color: #00FFEF;
+                width: 0%;
+                height: 100%;
+                position: absolute;
+                left: 0;
+                animation: fill 3s infinite;
+            }
+
+            @keyframes fill{
+                100%{
+                    width:100%
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="battery"></div>
+    </body>
+</html>
