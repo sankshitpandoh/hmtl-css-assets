@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>
+            Line Loader
+        </title>
+        <style>
+            body{
+                background-color: black;
+            }
+            .line-loader{
+                width: 0px;
+                height: 5px;
+                background-color: red;
+                animation: loader 2s infinite;
+                margin: 0 auto;
+            }
+            @keyframes loader{
+                50%{
+                    width: 100px;
+                    transition: ease-out;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="line-loader">
+        </div>
+    </body>
+</html>
