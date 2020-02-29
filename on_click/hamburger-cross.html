@@ -1,0 +1,238 @@
+<html>
+    <head>
+        <title>
+            hamburger to cross
+        </title>
+        <style>
+            *{
+               box-sizing: border-box;
+            }
+            body{
+             background: #973BE8;
+             padding: 40px;
+                }
+            .burger{
+            width: 40px;
+            height: 24px;
+            margin: 50px auto;
+            position: relative;
+            cursor: pointer;
+            }
+            .burger span{
+            position: absolute;
+            height: 3px;
+            background: #fff;
+            width: 100%;
+            left: 0;
+            }
+.mid{
+  top: 10px;
+}
+.bot{
+  top: 20px
+}
+
+.on .top{
+  animation: top-in 0.6s linear normal;
+  animation-fill-mode: forwards;
+}
+.on .bot{
+  animation: bot-in 0.6s linear normal;
+  animation-fill-mode: forwards;
+}
+.on .mid{
+  animation: mid-in 0.6s linear normal;
+  animation-fill-mode: forwards;
+}
+.off .top{
+  animation: top-out 0.6s linear normal;
+  animation-fill-mode: forwards;
+}
+.off .bot{
+  animation: bot-out 0.6s linear normal;
+  animation-fill-mode: forwards;
+}
+.off .mid{
+  animation: mid-out 0.6s linear normal;
+  animation-fill-mode: forwards;
+}
+
+@keyframes top-in {
+  0% {
+    top: 0;
+  }
+  75%{
+    top: 8px;
+    transform: rotate(0);
+  }
+  80% {
+    transform: rotate(45deg);
+     top: 10px;
+  }
+  85%{
+    transform: rotate(50deg);
+    top: 10px;
+  }
+  90%{
+    transform: rotate(40deg);
+    top: 10px;
+  }
+  100%{
+    transform: rotate(45deg);
+    top: 10px;
+  }
+  
+}
+
+@keyframes bot-in {
+  0% {
+    top: 20px;
+  }
+  75%{
+    top: 12px;
+    transform: rotate(0);
+  }
+  80% {
+    transform: rotate(-45deg);
+     top: 10px;
+  }
+  85%{
+    transform: rotate(-50deg);
+    top: 10px;
+  }
+  90%{
+    transform: rotate(-40deg);
+    top: 10px;
+  }
+  100%{
+    transform: rotate(-45deg);
+    top: 10px;
+  }
+  
+}
+
+@keyframes mid-in {
+  0% {
+    top: 10px;
+  }
+  75%{
+    top: 10px;
+    transform: rotate(0);
+  }
+  80% {
+    transform: rotate(-45deg);
+     top: 10px;
+  }
+  85%{
+    transform: rotate(-50deg);
+    top: 10px;
+  }
+  90%{
+    transform: rotate(-40deg);
+    top: 10px;
+  }
+  100%{
+    transform: rotate(-45deg);
+    top: 10px;
+  }
+  
+}
+
+@keyframes top-out {
+  0% {
+    transform: rotate(45deg);
+    top: 10px;
+  }
+  45%{
+    transform: rotate(0);
+    top: 8px;
+  }
+  65%{
+    transform: rotate(0);
+    top: 10px;
+  }
+  80%{
+    top: -1px;
+    transform: rotate(0);
+  }
+  90%{
+    top: 1px;
+    transform: rotate(0);
+  }
+  100%{
+    transform: rotate(0);
+    top: 0;
+  }
+  
+}
+
+@keyframes bot-out {
+  0% {
+    transform: rotate(-45deg);
+    top: 10px;
+  }
+  45%{
+    transform: rotate(0);
+    top: 10px;
+  }
+  65%{
+    transform: rotate(0);
+    top: 10px;
+  }
+  80%{
+    top: 21px;
+    transform: rotate(0);
+  }
+  90%{
+    top: 19px;
+    transform: rotate(0);
+  }
+  100%{
+    transform: rotate(0);
+    top: 20px;
+  }
+  
+}
+
+@keyframes mid-out {
+  0% {
+    transform: rotate(-45deg);
+    top: 10px;
+  }
+  45%{
+    transform: rotate(0);
+    top: 10px;
+  }
+  100%{
+    transform: rotate(0);
+    top: 10px;
+  }
+  
+}
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script type="text/javascript"> 
+        $('document').ready(function () {
+        var Closed = false;
+        $(document).on('click', '.burger', function(e){
+        if (Closed == true) {
+          $(this).removeClass('on');
+          $(this).addClass('off');
+          Closed = false;
+        } else {
+          $(this).removeClass('off');
+          $(this).addClass('on');
+          Closed = true;
+        }
+         });
+            });
+        </script>
+    </head>
+    <body>
+        <div class="burger">
+            <span class="top"></span>
+            <span class="mid"></span>
+            <span class="bot"></span>
+          </div>
+    </body>
+</html>
